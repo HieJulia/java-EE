@@ -1,0 +1,194 @@
+BOOK (done checking)
+    -> Lam cai nay va hoc cai nay 
+        1 Java EE 8 application development (done reading ) - done check source code - ko co project portfolio 
+        2 Architecturing modern Java ee applications(DANG DOC) - dang check source code - done check source code - PROJECT PORTFOLIO 
+        3 Java EE 8 cookbook (dang check ) - dang check source code - done check source code - PRACTICE - AP DUNG PROJECT PORTFOLIO 
+    4 Java EE 8 High performance - VERY BIG PROJECT - PROJECT PORTFOLIO (da doc so qua )- bay gio den lam project portfolio - practice book 
+    5 Java EE 8 and angular (dang check) - bay gio den check source code -  PROJECT PORTFOLIO
+    6 Java EE 8 recipes : a problem - solution approach - (chua doc ) - bay gio check source code - done check source code - sach co PROJECT PORTFOLIO
+    7 Developing middlewares in JavaEE 8 (dang doc) - da doc het - sach co project portfolio - check va doc lai nhug chap co project portfolio  - source code khong co gi ca - se check lai sau - da check source code - ko co project portfolio 
+    8 Building Restful web services with Java EE 8 (dang check) - practice- source project cua sach - neu big project - ap dung cho project porfolio 
+    9 Modern Java EE 8 design pattern : da doc xong - bay gio den check source code - neu co the ap dung duoc thi ap dung project portfolio hoac la practice 
+        van chua hoc het - doc so qua nhung chap kia - neu quan trong - thi hoan thanh cho het 
+    10 Java EE 8 development with eclipse (done reading) -
+
+
+
+
+11 Liberty in IBM CICS: Deploying and Managing Java EE Applications -
+    12 Java EE 8 Design Patterns and Best Practices - (dang doc ) - dang check source code - done check source code - PRACTICE PROJECT PORTFOLIO 
+
+
+
+
+
+
+    13 Pro JPA 2 in Java EE 8: An In-Depth Guide to Java Persistence APIs - dang check source code  
+
+    14 The Definitive Guide to JSF in Java EE 8: Building Web Applications with JavaServer Faces - dang check source code 
+
+    15 Java 9 modularity - dang check source code 
+
+    16 Hands on cloud development with wildfly - dang check source code 
+
+17 Learning modular Java programming
+ 18 Restful Java web services - third edition - hoan thanh check het source code - add github - practice project portfolio 
+    Practice chap : 
+    Project portfolio chap : 
+19 Mastering JBoss Enterprise Application Platform 7
+20 Java 9 Dependency Injection
+21 Modular Programming in Java 9
+,22 Java 9 Programming Blueprints - sap chuan bi doc 
+23 Java: High-Performance Apps with Java 9
+24 Testing Java Microservices: Using Arquillian, Hoverfly, AssertJ, JUnit, Selenium, and Mockito
+25 Design Patterns and Best Practices in Java
+27 Java 9: Building Robust Modular Applications
+28 Hands-On Artificial Intelligence with Java for Beginners
+29 Natural Language Processing with Java - Second Edition
+30 Java Language Features: With Modules, Streams, Threads, I/O, and Lambda Expressions
+
+31 JBoss: Developer's Guide - dang check source code 
+
+26 Mastering Java 9 (dang doc )  - dang check source code - done check source code - KO CO PROJECT PORTFOLIO - NHUNG NEN DOC LAI VA PRACTICE 
+
+
+
+
+GITHUB 
+
+Search : web services java ee, jaxrs, jersey , 
+
+Keyword : tomcat - jboss - glashfish - sql - no sql - application server
+
+Ap dung practice project 
+
+practice with intellij : https://github.com/Isaias2018/JavaEE-JakartaEE-
+https://github.com/mrts/vaadin-javaee-clinic-patient-queue-example
+https://github.com/lreimer/data-services-javaee7
+https://github.com/qa/pv243-2015-infinispan-seminar
+https://github.com/mananoreboton/javaeeoauth2
+https://github.com/Prodev2017/Software_Java_Design
+https://github.com/AdamczykMaciej/JavaNetworks
+https://github.com/yangwm/JavaEELearn
+https://github.com/MasatoshiTada/jjug-action-based-mvc
+https://github.com/martijnblankestijn/javaee7
+https://github.com/mj4444/JavaEE
+https://github.com/abondar24/JavaEEDemo
+https://github.com/JanDamek/JavaEETutorial
+https://github.com/gbelot2003/pplabmed
+https://github.com/kirillman1/InternetShop
+https://github.com/PeiAtGitHub/JavaEE_Labs
+https://github.com/mpalmeradel/JavaEEAssignment
+https://github.com/MarcoMontel/javaee7-samples
+https://github.com/DanTsk/JavaEE-Task
+https://github.com/jie1311/JavaEE-Assign
+https://github.com/psychok7/systems-integration
+https://github.com/WASdev/sample.mono-to-ms.pbw-monolith
+https://github.com/cgpradeepkumar/javaEESamples
+https://github.com/ekapinos/A005-EE-beginning-java-ee-7
+https://github.com/creeew/Shopping
+https://github.com/yky-1/yky
+https://github.com/Savindamad/SRMS-Website
+https://github.com/DanielCarrilloHerrera/EcommerceJEE
+https://github.com/eatsleepcode102/java-javaee
+https://github.com/yuliamineeva/ServletDB
+https://github.com/bim89/MyQuizGame
+https://github.com/martin-cerny/antique
+https://github.com/yqian1991/javaweb
+https://github.com/ruben5jami/CouponPlatform
+https://github.com/PacktPublishing/Java-EE-7-Development-with-NetBeans-8
+https://github.com/aminechaker/Projet-ERP
+https://github.com/BlcDec/MyJavaEEBlog
+https://github.com/Apress/beg-java-ee-5
+https://github.com/svanimpe/reminders
+https://github.com/gongchuanjing/InterestingJavaEE
+https://github.com/zhang13690/OldJavaEEPrimaryTutorial
+https://github.com/javaee-spec/java-ee-specs
+https://github.com/csoinc/java
+https://github.com/claudioaltamura/javaee
+https://github.com/rachedanis/J2EE-samples
+https://github.com/Berdir/hslu_enapp_webshop
+https://github.com/codebulb/javaee7beantypes
+https://github.com/tsypuk/JPA-Developer-Certified-Expert
+https://github.com/shyslav/JavaEE_MusicNews-sevlets
+https://github.com/mmuruev/Warehouse
+https://github.com/edvin/interapp
+https://github.com/arjantijms/jacc-provider
+https://github.com/amitagrawal11/shoppingcart
+
+
+
+
+Base project 
+https://github.com/matt77hias/JavaEE
+https://github.com/lchooman/JavaEE2014Project
+https://github.com/u1920603/javaEE-test
+
+https://github.com/ttatus/quiz
+https://www.youtube.com/watch?v=JN1iUUitgvY
+https://github.com/MartaEN/javaEE-sandbox
+
+
+
+Servlet : 
+https://github.com/Drajun/CinemaTicket-JavaEE
+
+
+RESTful 
+
+
+EJB / CDI 
+https://github.com/seam2/seam-examples-migrated-off-seam2
+https://github.com/cchacin/javaee6-template
+
+
+
+
+
+Ap dung add vao base project 
+https://github.com/racc-costa/javaee
+https://github.com/torgovtsev/SpaceT-Calendar
+
+
+Ap dung sau khi da xong base project 
+Book : 
+    + Architecturing modern java ee applications 
+    + Java EE 8 cookbook (practice ) - neu dc thi ap dung vao project portfolio - 
+    + Java EE recipes : co the dung lam base project - co the add vao base projecrt
+    + Java EE 8 development with eclipse
+    + 
+
+
+
+
+
+
+
+
+
+
+
+Project portfolio : 
++ Java EE 
++ Database : PostgreSQL 
++ API - web hook 
++ web crawler - 
++ database operations - take from 
++ web service : JaxRS - write API expose to web services - with Java EE (su dung JaxRS,Jersey )
++ Java EE - enterprise bean - 
++ Java EE - servlet 
++ Java EE - JSP 
+
++ 
+
+
+
+
+
+
+
+
+
+
+
+
