@@ -103,17 +103,12 @@ https://github.com/Apress/beg-java-ee-5
 https://github.com/svanimpe/reminders
 https://github.com/gongchuanjing/InterestingJavaEE
 https://github.com/zhang13690/OldJavaEEPrimaryTutorial
-https://github.com/javaee-spec/java-ee-specs
-https://github.com/csoinc/java
 https://github.com/claudioaltamura/javaee
 https://github.com/rachedanis/J2EE-samples
 https://github.com/Berdir/hslu_enapp_webshop
-https://github.com/codebulb/javaee7beantypes
 https://github.com/tsypuk/JPA-Developer-Certified-Expert
 https://github.com/shyslav/JavaEE_MusicNews-sevlets
 https://github.com/mmuruev/Warehouse
-https://github.com/edvin/interapp
-https://github.com/arjantijms/jacc-provider
 https://github.com/amitagrawal11/shoppingcart
 
 
@@ -127,6 +122,9 @@ https://github.com/u1920603/javaEE-test
 https://github.com/ttatus/quiz
 https://www.youtube.com/watch?v=JN1iUUitgvY
 https://github.com/MartaEN/javaEE-sandbox
+https://github.com/csoinc/java
+https://github.com/cdi-spec/cdi/tree/61a3d19384c11e24c3710064321dac36ac668a3b
+
 
 
 
