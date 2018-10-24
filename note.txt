@@ -21,8 +21,6 @@ BOOK (done checking)
 
 
 
-
-
     13 Pro JPA 2 in Java EE 8: An In-Depth Guide to Java Persistence APIs - dang check source code  
 
     14 The Definitive Guide to JSF in Java EE 8: Building Web Applications with JavaServer Faces - dang check source code 
@@ -35,10 +33,14 @@ BOOK (done checking)
  18 Restful Java web services - third edition - hoan thanh check het source code - add github - practice project portfolio 
     Practice chap : 
     Project portfolio chap : 
+    Dang add vao practice github project 
+
 19 Mastering JBoss Enterprise Application Platform 7
+
 20 Java 9 Dependency Injection
 21 Modular Programming in Java 9
-,22 Java 9 Programming Blueprints - sap chuan bi doc 
+    22 Java 9 Programming Blueprints - sap chuan bi doc - chua doc 
+        Dang check source code - va add vao project portfolio 
 23 Java: High-Performance Apps with Java 9
 24 Testing Java Microservices: Using Arquillian, Hoverfly, AssertJ, JUnit, Selenium, and Mockito
 25 Design Patterns and Best Practices in Java
@@ -46,6 +48,7 @@ BOOK (done checking)
 28 Hands-On Artificial Intelligence with Java for Beginners
 29 Natural Language Processing with Java - Second Edition
 30 Java Language Features: With Modules, Streams, Threads, I/O, and Lambda Expressions
++ Java 9 programming by example 
 
 31 JBoss: Developer's Guide - dang check source code 
 
@@ -71,17 +74,10 @@ https://github.com/Prodev2017/Software_Java_Design
 https://github.com/AdamczykMaciej/JavaNetworks
 https://github.com/yangwm/JavaEELearn
 https://github.com/MasatoshiTada/jjug-action-based-mvc
-https://github.com/martijnblankestijn/javaee7
-https://github.com/mj4444/JavaEE
-https://github.com/abondar24/JavaEEDemo
 https://github.com/JanDamek/JavaEETutorial
 https://github.com/gbelot2003/pplabmed
 https://github.com/kirillman1/InternetShop
 https://github.com/PeiAtGitHub/JavaEE_Labs
-https://github.com/mpalmeradel/JavaEEAssignment
-https://github.com/MarcoMontel/javaee7-samples
-https://github.com/DanTsk/JavaEE-Task
-https://github.com/jie1311/JavaEE-Assign
 https://github.com/psychok7/systems-integration
 https://github.com/WASdev/sample.mono-to-ms.pbw-monolith
 https://github.com/cgpradeepkumar/javaEESamples
@@ -93,7 +89,6 @@ https://github.com/DanielCarrilloHerrera/EcommerceJEE
 https://github.com/eatsleepcode102/java-javaee
 https://github.com/yuliamineeva/ServletDB
 https://github.com/bim89/MyQuizGame
-https://github.com/martin-cerny/antique
 https://github.com/yqian1991/javaweb
 https://github.com/ruben5jami/CouponPlatform
 https://github.com/PacktPublishing/Java-EE-7-Development-with-NetBeans-8
@@ -138,6 +133,8 @@ RESTful
 EJB / CDI 
 https://github.com/seam2/seam-examples-migrated-off-seam2
 https://github.com/cchacin/javaee6-template
+https://github.com/martin-cerny/antique
+
 
 
 
@@ -177,7 +174,7 @@ Project portfolio :
 + Java EE - servlet 
 + Java EE - JSP 
 
-+ 
++ Java EE - JMS 
 
 
 
