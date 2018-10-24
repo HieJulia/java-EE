@@ -42,11 +42,8 @@ import org.bson.Document;
 import org.codehaus.jettison.json.JSONException;
 import org.codehaus.jettison.json.JSONObject;
 
-/**
- *
- * @author jason
- */
-@Path("auth")
+// path :
+@Path("/auth")
 public class AuthenticationResource {
 
     private final String clientId;
@@ -65,6 +62,8 @@ public class AuthenticationResource {
     @Inject
     @Collection("users")
     private MongoCollection<Document> collection;
+
+    // inject : Collection : users 
     @Inject
     private KeyGenerator keyGenerator;
 
@@ -74,6 +73,9 @@ public class AuthenticationResource {
         flow = new GoogleAuthorizationCodeFlow.Builder(HTTP_TRANSPORT,
                 new JacksonFactory(), clientId, clientSecret, SCOPES).build();
     }
+    // clientId - clientSecret - flow - http transport - user info url - 
+
+    
 //
 //    @PostConstruct
 //    public void postConstruct() {
@@ -86,6 +88,7 @@ public class AuthenticationResource {
         return flow.newAuthorizationUrl()
                 .setRedirectUri(getCallbackUri()).build();
     }
+    // /url : 
 
     @GET
     @Path("callback")
@@ -107,6 +110,9 @@ public class AuthenticationResource {
             collection.insertOne(user.toDocument());
         }
     }
+    // create user infor - User - fine - email - 
+    // if null  
+        // collection.insertOne- user . todoc 
 
     private User getUserInfoJson(final String authCode) throws IOException {
         try {
@@ -130,6 +136,17 @@ public class AuthenticationResource {
         }
     }
 
+    // get user info to json ; aut code 
+    // try 
+        /**
+         * + final GoogleTokenResponse : execute 
+         * + credential : flow.createAndStoreCredentials 
+         * + final json object = 
+         * 
+         * 
+         */
+    // catch log 
+
     private String getCallbackUri() throws UriBuilderException, IllegalArgumentException {
         return uriInfo.getBaseUriBuilder()
                 .path("auth")
@@ -138,6 +155,7 @@ public class AuthenticationResource {
                 .toASCIIString();
     }
 
+    // getCallBackuri : uriinfo
     private String createToken(String login) {
         String jwtToken = Jwts.builder()
                 .setSubject(login)
@@ -149,4 +167,6 @@ public class AuthenticationResource {
                 .compact();
         return jwtToken;
     }
+
+    // create token : login - 
 }

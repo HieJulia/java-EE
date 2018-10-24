@@ -7,7 +7,10 @@ BOOK (done checking)
     5 Java EE 8 and angular (dang check) - bay gio den check source code -  PROJECT PORTFOLIO
     6 Java EE 8 recipes : a problem - solution approach - (chua doc ) - bay gio check source code - done check source code - sach co PROJECT PORTFOLIO
     7 Developing middlewares in JavaEE 8 (dang doc) - da doc het - sach co project portfolio - check va doc lai nhug chap co project portfolio  - source code khong co gi ca - se check lai sau - da check source code - ko co project portfolio 
-    8 Building Restful web services with Java EE 8 (dang check) - practice- source project cua sach - neu big project - ap dung cho project porfolio 
+    8 Building Restful web services with Java EE 8 (dang check) - 
+        practice- source project cua sach - neu big project - ap dung cho project porfolio 
+        DANG CHECK SOURCE CODE  
+        DANG AP DUNG VAO PROJECT PORTFOLIO 
     9 Modern Java EE 8 design pattern : da doc xong - bay gio den check source code - neu co the ap dung duoc thi ap dung project portfolio hoac la practice 
         van chua hoc het - doc so qua nhung chap kia - neu quan trong - thi hoan thanh cho het 
     10 Java EE 8 development with eclipse (done reading) -
@@ -40,7 +43,8 @@ BOOK (done checking)
 20 Java 9 Dependency Injection
 21 Modular Programming in Java 9
     22 Java 9 Programming Blueprints - sap chuan bi doc - chua doc 
-        Dang check source code - va add vao project portfolio 
+        DA CHECK XONG SOURCE CODE 
+        DA ADD VAO PRACTICE PROJECT PORTFOLIO
 23 Java: High-Performance Apps with Java 9
 24 Testing Java Microservices: Using Arquillian, Hoverfly, AssertJ, JUnit, Selenium, and Mockito
 25 Design Patterns and Best Practices in Java
