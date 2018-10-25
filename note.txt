@@ -209,13 +209,19 @@ Project portfolio :
 + API - web hook 
 + web crawler - 
 + database operations - take from 
-+ web service : JaxRS - write API expose to web services - with Java EE (su dung JaxRS,Jersey )
-+ Java EE - enterprise bean - 
++ web service : JaxRS - write API expose to web services - with Java EE (su dung JaxRS,Jersey ) - 2 project - expose JSON - 
++ Java EE - enterprise bean - 1 project 
++ Java EE - CDI - 1 project 
 + Java EE - servlet 
-+ Java EE - JSP 
++ Java EE - JSP  - 1 project 
+
++ 
 
 + Java EE - JMS 
 
+
+
++ Desktop application 
 
 
 
