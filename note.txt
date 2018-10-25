@@ -141,6 +141,10 @@ https://github.com/Drajun/CinemaTicket-JavaEE
 https://github.com/yky-1/yky
 https://github.com/yuliamineeva/ServletDB
 https://github.com/muhfred/WebMartApp
+https://github.com/duisenbayeva/BookStore-web-application
+https://github.com/faizan-ali/full-javaee-app
+https://github.com/Cousjava/jee-tut
+
 
 
 
