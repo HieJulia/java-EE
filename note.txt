@@ -124,6 +124,9 @@ https://github.com/oatkachenko/EE
 https://github.com/JeremyPansier/JavaEE_website
 https://github.com/plushkinqt/VIS
 https://github.com/jeqo/java-ee-rxjava-kafka-avro
+https://github.com/blacker-cz/pis-library
+https://github.com/lreimer/building-javaee-microservices
+https://github.com/bigGreenPeople/javaEE
 
 https://github.com/ttatus/quiz
 https://github.com/adabeauty/JavaEE_Spring
@@ -132,6 +135,9 @@ https://github.com/MartaEN/javaEE-sandbox
 https://github.com/csoinc/java
 https://github.com/cdi-spec/cdi/tree/61a3d19384c11e24c3710064321dac36ac668a3b
 https://github.com/521v587/JavaEE-e3mall
+https://github.com/bjau/BunchOfFriends
+https://github.com/Apress/beg-java-ee-6-w-glassfish-3
+https://github.com/pizirun/hjpetstore1
 
 
 
@@ -149,6 +155,12 @@ https://github.com/Cousjava/jee-tut
 
 
 RESTful 
+
+
+
+Hibernate 
+https://github.com/TheGuysBrushes/CrowdfundingWebApp
+
 
 
 EJB / CDI 
