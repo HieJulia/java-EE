@@ -138,7 +138,6 @@ https://github.com/Apress/beg-java-ee-6-w-glassfish-3
 
 
 Servlet : 
-
 https://github.com/yky-1/yky
 https://github.com/yuliamineeva/ServletDB
 https://github.com/muhfred/WebMartApp
