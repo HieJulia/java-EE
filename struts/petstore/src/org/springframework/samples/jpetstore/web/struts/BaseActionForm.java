@@ -11,21 +11,21 @@ import org.apache.struts.action.ActionMessage;
 
 public class BaseActionForm extends ActionForm {
     /**
-     * ╢кдквНт╜й╪╣д╢МнС╢╕юМ╥╫╥╗ё╛╫╚кЫсп╢МнСпео╒╪схК╣╫р╩╦Жап╠М╨Сё╛х╩╨С╢ФхК╣╫
-     * Servlet гКгСйТптжп╧╘рЁцФй╧сц.
-     * ╦Эож╢З╣д╥╫╥╗йгй╧сц Struts1.1 ж╝╨С╣д commons-validator,╧ьсзуБ╦Ж╧╕дэтз
-     * ╦Вжж╧ьсз Struts ╣д╡н©╪╩РйИ╪╝жп╤╪сп╫Ииэ║ё
+     * О©╫О©╫О©╫О©╫О©╫О©╫т╜й╪О©╫д╢О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫п╢О©╫О©╫О©╫О©╫О©╫о╒О©╫О©╫О©╫К╣╫р╩О©╫О©╫О©╫п╠О©╫О©╫х╩О©╫О©╫О©╫О©╫К╣╫
+     * Servlet О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫п╧О©╫рЁО©╫О©╫й╧О©╫О©╫.
+     * О©╫О©╫О©╫ж╢О©╫О©╫д╥О©╫О©╫О©╫О©╫О©╫й╧О©╫О©╫ Struts1.1 ж╝О©╫О©╫О©╫ commons-validator,О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫
+     * О©╫О©╫О©╫ж╧О©╫О©╫О©╫ Struts О©╫д╡н©О©╫О©╫О©╫О©╫И╪╝О©╫п╤О©╫О©╫п╫О©╫О©╫э║О©╫
      *
-     * йг╥Ян╙╣Всц╢к╥╫╥╗йгм╗╧ЩйТпт validate ю╢©ьжф╣дё╛хГё╨
+     * О©╫г╥О©╫н╙О©╫О©╫О©╫ц╢к╥О©╫О©╫О©╫О©╫О©╫м╗О©╫О©╫О©╫О©╫О©╫О©╫ validate О©╫О©╫О©╫О©╫О©╫ф╣дёО©╫О©╫Гё╨
      * <action path="/shop/signon" type="org.springframework.samples.jpetstore.web.struts.SignonAction"
      * name="accountForm" scope="session" validate="false">
-     * йг╡╩╩А╣Всц╣дё╛рРн╙ validate="false".
+     * О©╫г╡О©╫О©╫О©╫О©╫О©╫ц╣дёО©╫О©╫О©╫н╙ validate="false".
      */
     public ActionErrors validate(ActionMapping mapping, HttpServletRequest request) {
         ActionErrors errorMessages = null;
         
-        // уШ╦Жо╣мЁ╣д╢МнСпео╒ап╠Мё╛м╗╧Щ╣Всц doValidate(mapping, request, errorList);
-        // addErrorIfStringEmpty ╩А╫╚╢МнСпео╒╪схК╣╫ап╠М╣╠жпё╛╡╒гркЭ╠╩╢ФхКакгКгСйТпт╣╠жп.
+        // О©╫О©╫О©╫О©╫о╣мЁО©╫д╢О©╫О©╫О©╫О©╫О©╫о╒О©╫п╠О©╫м╗О©╫О©╫О©╫О©╫О©╫О©╫ doValidate(mapping, request, errorList);
+        // addErrorIfStringEmpty О©╫А╫╚О©╫О©╫О©╫О©╫О©╫О©╫о╒О©╫О©╫О©╫К╣╫О©╫п╠О©╫О©╫пёО©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫т╣О©╫О©╫О©╫.
         ArrayList errorList = new ArrayList();
         doValidate(mapping, request, errorList);
         request.setAttribute("errors", errorList);
@@ -35,11 +35,14 @@ public class BaseActionForm extends ActionForm {
         }
         return errorMessages;
     }
+
+    // validate action erros : mapping m reque s
+    // 
     
     /**
-     * ╢к╥╫╥╗╠╩иХ╪фн╙╧╘всюЮ╦╡╦г╣д(overriding).
-     * хн╨нвсюЮй╣ожакуБ╦Ж╥╫╥╗ё╛╫╚вт╤╞╠╩иоцФ╣д validate ╥╫╥╗╣Всц║ё
-     * уБр╡йгиХ╪фдёй╫╣др╩жжё╛╩ЫюЮлА╧╘акдё╟Её╛всюЮ╫╚фДй╣ож║ё
+     * О©╫к╥О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫н╙О©╫О©╫О©╫О©╫О©╫Ю╦╡О©╫г╣О©╫(overriding).
+     * О©╫н╨О©╫О©╫О©╫О©╫О©╫й╣О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫т╤О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫ validate О©╫О©╫О©╫О©╫О©╫О©╫О©╫ц║О©╫
+     * О©╫О©╫р╡О©╫О©╫О©╫О©╫О©╫дёй╫О©╫О©╫р╩О©╫жёО©╫О©╫О©╫О©╫О©╫О©╫А╧╘О©╫О©╫дёО©╫Её╛О©╫О©╫О©╫Ю╫╚О©╫О©╫й╣О©╫ж║О©╫
      * @param mapping
      * @param request
      * @param errors
@@ -48,11 +51,11 @@ public class BaseActionForm extends ActionForm {
     }
     
     /**
-     * ╢к╦╗жЗ╥╫╥╗╠╩сцю╢╦Ь╤╗╣дрЁцФйДхКдзхщйг╥Ян╙©уё╛хГ╧Шйг©у╣д╩╟ё╛╫╚отй╬╦Ь╤╗╣дЁЖ╢Мпео╒║ё
+     * О©╫к╦О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫рЁО©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫г╥О©╫н╙О©╫уёО©╫О©╫О©╫О©╫О©╫г©у╣д╩О©╫О©╫О©╫О©╫О©╫О©╫О©╫й╬О©╫О©╫О©╫О©╫О©╫дЁО©╫О©╫О©╫О©╫О©╫о╒О©╫О©╫
      *
-     * @param errors ╢МнСпео╒ап╠М
-     * @param message ╣╠ value н╙©уй╠ё╛╫╚отй╬уБ╦Ж╢МнСпео╒
-     * @param value рЁцФт╙кь╤тс╕╣дж╣
+     * @param errors О©╫О©╫О©╫О©╫О©╫О©╫о╒О©╫п╠О©╫
+     * @param message О©╫О©╫ value н╙О©╫О©╫й╠О©╫О©╫О©╫О©╫О©╫О©╫й╬О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫О©╫о╒
+     * @param value рЁО©╫О©╫т╙О©╫ь╤О©╫с╕О©╫О©╫ж╣
      */
     protected void addErrorIfStringEmpty(List errors, String message, String value) {
         if (value == null || value.trim().length() < 1) {

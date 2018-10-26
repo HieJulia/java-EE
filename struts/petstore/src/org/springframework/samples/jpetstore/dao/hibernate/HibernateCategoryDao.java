@@ -8,8 +8,8 @@ import org.springframework.samples.jpetstore.dao.CategoryDao;
 import org.springframework.samples.jpetstore.domain.Category;
 
 /**
- * domain µÄÓïÒå·¢ÉúÁË¸Ä±ä£¬categoryId ²»ÔÙÎªÓë categoryName ÖØ¸´µÄÁĞ£¬¶øÊÇ
- * ÓÉ hibernate ×Ô¶¯Î¬»¤µÄÖµ£¬Òò´ËÔ­ÏÈµÄ categoryId ÏÖÔÚÓë categoryName Í¬.
+ * domain ï¿½ï¿½ï¿½ï¿½ï¿½å·¢ï¿½ï¿½ï¿½Ë¸Ä±ä£¬categoryId ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ categoryName ï¿½Ø¸ï¿½ï¿½ï¿½ï¿½Ğ£ï¿½ï¿½ï¿½ï¿½ï¿½
+ * ï¿½ï¿½ hibernate ï¿½Ô¶ï¿½Î¬ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½Ô­ï¿½Èµï¿½ categoryId ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ categoryName Í¬.
  */
 public class HibernateCategoryDao extends HibernateDaoSupport implements CategoryDao {
   
@@ -35,3 +35,6 @@ public class HibernateCategoryDao extends HibernateDaoSupport implements Categor
     return category;
   }
 }
+
+// get list : from category.list()
+// by nmae fien rom wehr e

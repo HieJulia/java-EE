@@ -9,68 +9,70 @@ import org.springframework.samples.jpetstore.domain.Account;
 
 public class AccountActionForm extends BaseActionForm {
     
-    /** ÓÃÓÚ¼ìÑéµÄ³£Á¿¶¨Òå£¬ÒòÎªÔÚÐÂ½¨ÕÊ»§ÓëÐÞ¸ÄÕÊ»§Ê±¼ìÑéÂß¼­ÊÇ²»Ò»ÑùµÄ¡£
-     * ÖÁÉÙÔÚÐÞ¸ÄÕÊ»§Ê±£¬ÕÊ»§ÃûÊÇÒÑ¾­´æÔÚÁË */
+    /** ï¿½ï¿½ï¿½Ú¼ï¿½ï¿½ï¿½Ä³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½å£¬ï¿½ï¿½Îªï¿½ï¿½ï¿½Â½ï¿½ï¿½Ê»ï¿½ï¿½ï¿½ï¿½Þ¸ï¿½ï¿½Ê»ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ß¼ï¿½ï¿½Ç²ï¿½Ò»ï¿½ï¿½ï¿½Ä¡ï¿½
+     * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Þ¸ï¿½ï¿½Ê»ï¿½Ê±ï¿½ï¿½ï¿½Ê»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ñ¾ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ */
     public static final String VALIDATE_EDIT_ACCOUNT = "editAccount";
     public static final String VALIDATE_NEW_ACCOUNT = "newAccount";
     
-    /** ÓÃÓÚ´æÖüÓÃ»§µÄÊ×ÏÈÓïÑÔµÄÁÐ±í */
+    /** ï¿½ï¿½ï¿½Ú´ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôµï¿½ï¿½Ð±ï¿½ */
     private static final ArrayList LANGUAGE_LIST = new ArrayList();
     
     /* Private Fields */
-    // ¿´ÆðÀ´ºÃÏóÓë Account ÖÐµÄ³ÉÔ±ÖØ¸´ÁË£¬ÕâÊÇÒòÎª´Ë Form ±»¶à¸öÒ³ÃæÖØ¸´Ê¹ÓÃµÄ
-    // ½á¹û£¬ÒòÎªÔÚµÇÂ¼Ò³ÃæÊ±£¬ÄÇÊ±¸ù±¾²»´æÔÚ Account, ËùÒÔ²»¿ÉÄÜÍ¨¹ý
-    // account.getUsername() ºÍ account.getPassword() À´µÃµ½ÓÃ»§µÄÊäÈëÖµµÄ£¬
+    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Account ï¿½ÐµÄ³ï¿½Ô±ï¿½Ø¸ï¿½ï¿½Ë£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ Form ï¿½ï¿½ï¿½ï¿½ï¿½Ò³ï¿½ï¿½ï¿½Ø¸ï¿½Ê¹ï¿½Ãµï¿½
+    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½Úµï¿½Â¼Ò³ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Account, ï¿½ï¿½ï¿½Ô²ï¿½ï¿½ï¿½ï¿½ï¿½Í¨ï¿½ï¿½
+    // account.getUsername() ï¿½ï¿½ account.getPassword() ï¿½ï¿½ï¿½Ãµï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½Ä£ï¿½
     
-    // ÏÂÃæÁ½Ïî¼´ÊÇÔÚµÇÂ¼µ±Ê±ÊÕ¼¯ÊäÈë ÐÅÏ¢£¬
-    // ÆäËüÇé¿ö£¨±ÈÈçÐÞ¸Ä£¬ÐÂ½¨ÕÊ»§Ê±£©¶¼ÊÇ¼ä½ÓÊ¹ÓÃÁË Account ÖÐµÄ³ÉÔ±£¬Òòµ±Ê±¶¼
-    // ÒÑ¾­ÔÚ session ÖÐ´æ·ÅÁËÒ»¸ö Account µÄÊµÀý
+    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½î¼´ï¿½ï¿½ï¿½Úµï¿½Â¼ï¿½ï¿½Ê±ï¿½Õ¼ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½Ï¢ï¿½ï¿½
+    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Þ¸Ä£ï¿½ï¿½Â½ï¿½ï¿½Ê»ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½Ç¼ï¿½ï¿½Ê¹ï¿½ï¿½ï¿½ï¿½ Account ï¿½ÐµÄ³ï¿½Ô±ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½
+    // ï¿½Ñ¾ï¿½ï¿½ï¿½ session ï¿½Ð´ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ Account ï¿½ï¿½Êµï¿½ï¿½
     
-    // ËùÒÔÖØÓÃÊÇÓÐ´ú¼ÛµÄ£¨Ê¹´úÂë²»ÄÇÃ´Ö±¹ÛÁË£¬Èç¹ûÊÇÒ»¸öÒ³Ãæ±íµ¥ Form ¶ÔÓ¦Ò»¸ö
-    // FormBean µÄ»°£¬ÒÔÏÂ³ÉÔ±ÓëÒ³ÃæÖÐµÄÊäÈëÔªËØÊÇÒ»Ò»¶ÔÓ¦µÄ£©
+    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð´ï¿½ï¿½ÛµÄ£ï¿½Ê¹ï¿½ï¿½ï¿½ë²»ï¿½ï¿½Ã´Ö±ï¿½ï¿½ï¿½Ë£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Ò³ï¿½ï¿½ï¿½ Form ï¿½ï¿½Ó¦Ò»ï¿½ï¿½
+    // FormBean ï¿½Ä»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Â³ï¿½Ô±ï¿½ï¿½Ò³ï¿½ï¿½ï¿½Ðµï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½ï¿½ï¿½ï¿½Ò»Ò»ï¿½ï¿½Ó¦ï¿½Ä£ï¿½
     
-    // ¹©µÇÂ¼Ò³ÃæÊ¹ÓÃµÄ ÔªËØ
+    // ï¿½ï¿½ï¿½ï¿½Â¼Ò³ï¿½ï¿½Ê¹ï¿½Ãµï¿½ Ôªï¿½ï¿½
     private String username;
     private String password;
     
-    // µÇÂ¼ºó£¬ÓëÕÊ»§Ïà¹ØµÄÔªËØ
+    // ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½ï¿½Ê»ï¿½ï¿½ï¿½Øµï¿½Ôªï¿½ï¿½
     private String repeatedPassword;
     private List languages;
     private List categories;
+
+    // account action form : username, password , language , categories 
     
     /**
-     * Õâ¸ö³ÉÔ±µÄÖµÊÇÍ¨¹ýÒ³ÃæÒþ²ØÔªËØ´«ÈëµÄ£º
-     * NewAccountForm.jsp ÖÐ: <html:hidden name="workingAccountForm" property="validate" value="newAccount"/>
-     * EditAccountForm.jsp ÖÐ:<html:hidden name="workingAccountForm" property="validate" value="editAccount" />
+     * ï¿½ï¿½ï¿½ï¿½ï¿½Ô±ï¿½ï¿½Öµï¿½ï¿½Í¨ï¿½ï¿½Ò³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½Ø´ï¿½ï¿½ï¿½Ä£ï¿½
+     * NewAccountForm.jsp ï¿½ï¿½: <html:hidden name="workingAccountForm" property="validate" value="newAccount"/>
+     * EditAccountForm.jsp ï¿½ï¿½:<html:hidden name="workingAccountForm" property="validate" value="editAccount" />
      */
     private String validate;
     
     /**
-     * ÓÃÀ´¼Ç×¡ÓÃ»§ÊÇ´ÓÄÄÀïÌø×ª¹ýÀ´µÄ£¬ÒòÎª×¼±¸¶Ô¹ºÎï³µ½øÐÐ½áËãÊ±£¬Èç¹ûÃ»ÓÐµÇÂ¼
-     * µÄ»°£¬Ê×ÏÈ½«½áËãÖÐÐÄÒ³ÃæµÄµØÖ·´æÈë´Ë³ÉÔ±ÖÐ£¬µÇÂ¼³É¹¦ºóÔÙÌø×ª¹ýÈ¥¡£
-     * Èç¹ûÃ»ÓÐÕâÑùÒ»²½²Ù×÷µÄ»°£¬ÄÇÃ´¾Í»á³öÏÖÌÖÑáµÄ½«ÄãËÍ»ØÊ×Ò³Ãæ(Ò²¾ÍÊÇ³ÌÐò
-     * µÄÂß¼­Á÷³Ì´òÈÅÁËÓÃ»§µÄ½ø³Ì£¬ÕâÊÇ×îÓ¦µ±±ÜÃâµÄ¡£)
+     * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×¡ï¿½Ã»ï¿½ï¿½Ç´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×ªï¿½ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ï¿½ï¿½Îª×¼ï¿½ï¿½ï¿½Ô¹ï¿½ï¿½ï³µï¿½ï¿½ï¿½Ð½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½Ðµï¿½Â¼
+     * ï¿½Ä»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò³ï¿½ï¿½Äµï¿½Ö·ï¿½ï¿½ï¿½ï¿½Ë³ï¿½Ô±ï¿½Ð£ï¿½ï¿½ï¿½Â¼ï¿½É¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×ªï¿½ï¿½È¥ï¿½ï¿½
+     * ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä»ï¿½ï¿½ï¿½ï¿½ï¿½Ã´ï¿½Í»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä½ï¿½ï¿½ï¿½ï¿½Í»ï¿½ï¿½ï¿½Ò³ï¿½ï¿½(Ò²ï¿½ï¿½ï¿½Ç³ï¿½ï¿½ï¿½
+     * ï¿½ï¿½ï¿½ß¼ï¿½ï¿½ï¿½ï¿½Ì´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½Ä½ï¿½ï¿½Ì£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¡ï¿½)
      */
     private String forwardAction;
     
     /**
-     * ËùÓÐµÄÕÊºÅÐÅÏ¢·ÅÔÚÕâ¸ö POJO ÖÐ
+     * ï¿½ï¿½ï¿½Ðµï¿½ï¿½Êºï¿½ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ POJO ï¿½ï¿½
      */
     private Account account;
     
     // added by pprun
     /**
-     * ÓÃÓÚÏÔÊ¾±êÓï£¬µ±ÄãÔÚÓÃ»§ÐÅÏ¢Ò³ÃæÑ¡ÔñÏÔÊ¾±êÓïÊ±
+     * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½Ï¢Ò³ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½Ê±
      */
     private String bannerName;
     
     /**
-     * ÓÃÓÚÏÔÊ¾¸ù¾ÝÓÃ»§µÄÏ²ºÃ±»ÍÆ¼öµÄ³èÎïÁÐ±í,µ±ÄãÑ¡ÔñÁËÏÔÊ¾¸ÃÁÐ±íÊ±¡£
+     * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½Ï²ï¿½Ã±ï¿½ï¿½Æ¼ï¿½ï¿½Ä³ï¿½ï¿½ï¿½ï¿½Ð±ï¿½,ï¿½ï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½ï¿½Ð±ï¿½Ê±ï¿½ï¿½
      */
     private PagedListHolder myList;
     
     /**
-     * ÓÃ»§×îÏ²»¶µÄ³èÎïÀà±ð
+     * ï¿½Ã»ï¿½ï¿½ï¿½Ï²ï¿½ï¿½ï¿½Ä³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
      */
     private String favCategoryName;
     
@@ -166,7 +168,7 @@ public class AccountActionForm extends BaseActionForm {
     }
     
     /**
-     * ¸²¸Ç¸¸ÀàÖÐµÄ·½·¨£¬ÓÃÓÚÊäÈëÐ£Ñé
+     * ï¿½ï¿½ï¿½Ç¸ï¿½ï¿½ï¿½ï¿½ÐµÄ·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð£ï¿½ï¿½
      */
     public void doValidate(ActionMapping mapping,
             HttpServletRequest request, List errors) {
@@ -174,7 +176,7 @@ public class AccountActionForm extends BaseActionForm {
             if (VALIDATE_EDIT_ACCOUNT.equals(validate) ||
                     VALIDATE_NEW_ACCOUNT.equals(validate)) {
                 if (VALIDATE_NEW_ACCOUNT.equals(validate)) {
-                    // ÊÇÐÂ½¨ÕÊ»§Ê±£¬ÐèÒª¶îÍâµÄÐ£Ñé
+                    // ï¿½ï¿½ï¿½Â½ï¿½ï¿½Ê»ï¿½Ê±ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½Ð£ï¿½ï¿½
                     
                     account.setStatus("OK");
                     addErrorIfStringEmpty(errors, "User ID is required.",
@@ -218,19 +220,19 @@ public class AccountActionForm extends BaseActionForm {
     }
     
     /**
-     * ´Ë·½·¨ÊÇÒ»¸öºÜÖØÒªµÄ·½·¨£¬ÎÒÃÇ¿´¿´»ùÀàÖÐ¶Ô¸Ã·½·¨µÄÃèÊö:
+     * ï¿½Ë·ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½Ä·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð¶Ô¸Ã·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½:
      *
      * Reset bean properties to their default state, as needed.
      * This method is called before the properties are repopulated by the controller.
-     * ÔÚÐèÒªÊ±£¬¸´Î» Bean µÄÊôÐÔÖµ£¬´Ë·½·¨ÊÇÔÚ¿ØÖÆÆ÷ÖØÐÂ×é×°BeanµÄÊôÐÔÖµÖ®Ç°µ÷ÓÃµÄ¡£
+     * ï¿½ï¿½ï¿½ï¿½ÒªÊ±ï¿½ï¿½ï¿½ï¿½Î» Bean ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµï¿½ï¿½ï¿½Ë·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ú¿ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×°Beanï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÖµÖ®Ç°ï¿½ï¿½ï¿½ÃµÄ¡ï¿½
      *
      * The default implementation does nothing. In practice, the only properties
      * that need to be reset are those which represent checkboxes on a
      * session-scoped form. Otherwise, properties can be given initial values
      * where the field is declared.
-     * Ä¬ÈÏµÄÊµÏÖ£¬²¢Ã»ÓÐ×öÈÎºÎÊÂ¡£Êµ¼ÊÉÏ£¬Î¨Ò»ÐèÒªÖØÖÃµÄÊôÐÔÊÇÄÇÐ©»ùÓÚ
-     * session ×÷ÓÃÓòµÄ¸´Ñ¡¿òÒ³ÃæÔªËØ¡£·ñÔòÕâÐ©ÔªËØ½«Ê¹ÓÃÒ³ÃæÉÏÉùÃ÷µÄÄ¬ÈÏÖµ¡£
-     * ÊÇ¹´Ñ¡»¹ÊÇÎ´¹´Ñ¡¡£
+     * Ä¬ï¿½Ïµï¿½Êµï¿½Ö£ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½Îºï¿½ï¿½Â¡ï¿½Êµï¿½ï¿½ï¿½Ï£ï¿½Î¨Ò»ï¿½ï¿½Òªï¿½ï¿½ï¿½Ãµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð©ï¿½ï¿½ï¿½ï¿½
+     * session ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¸ï¿½Ñ¡ï¿½ï¿½Ò³ï¿½ï¿½Ôªï¿½Ø¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð©Ôªï¿½Ø½ï¿½Ê¹ï¿½ï¿½Ò³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¬ï¿½ï¿½Öµï¿½ï¿½
+     * ï¿½Ç¹ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½Î´ï¿½ï¿½Ñ¡ï¿½ï¿½
      *
      * If the form is stored in session-scope so that values can be collected
      * over multiple requests (a "wizard"), you must be very careful of which properties,
@@ -238,19 +240,19 @@ public class AccountActionForm extends BaseActionForm {
      * false for any page where this property is set. This is because the client
      * does not submit a checkbox value when it is clear (false).
      * If a session-scoped checkbox is not proactively reset, it can never be set to false.
-     * ¼ÙÈç±íµ¥ÊÇ´æÖüÔÚ Session ×÷ÓÃÓòÖÐ(Èç£º
+     * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç´ï¿½ï¿½ï¿½ï¿½ï¿½ Session ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½(ï¿½ç£º
      * <action path="/shop/signon" type="org.springframework.samples.jpetstore.web.struts.SignonAction"
      * name="accountForm" scope="session" validate="false">
-     * ¼´ÉùÃ÷Îª session ·¶Î§µÄ formBean)µÄ»°£¬±íµ¥ÔªËØµÄÖµ¿ÉÒÔÔÚ¶à¸öÇëÇó(¼´¶àÒ³Ïòµ¼ÐÔÒ³Ãæ)
-     * ÖÐ±»ÊÕ¼¯£¬´ËÊ±±ØÐëÐ¡ÐÄ¶ÔµÈÄÄÐ©ÊäÈëÓò±ØÐëÖØÖÃ¡£ÏóÎÒÃÇÇ°ÃæËùÊö£¬session
-     * ×÷ÓÃÓò·¶Î§ÄÚµÄ checkbox(¸´Ñ¡°´Å¥)£¬ÔÚÎªËüÃÇÉèÖÃÖµÖ®Ç°±ØÐëÖØÖÃÎª false£¬
-     * ÒòÎª¿Í»§¶Ë(¼´ä¯ÀÀÆ÷)ÔÚ¸´Ñ¡°´Å¥Î´±»¹´Ñ¡Ê±²¢²»»á·¢ËÍÈÎºÎÖµµ½·þÎñÆ÷¶Ë¡£(·ñÔò£¬
-     * ¾Í³öÏÖÕâÑùµÄÎÊÌâ£ºÈç¹ûÖ®Ç°¸Ã¸´Ñ¡°´Å¥ÊÇ¹´Ñ¡×´Ì¬£¬²¢ÇÒÓÃ»§ÇëÇóÕâÒ»Ò³Ãæ
-     * ¸Ã°´Å¥ÏÔÊ¾Îª¹´Ñ¡×´Ì¬£¬ÔÚºóÐøµÄ²Ù×÷ÖÐ£¬ÓÃ»§È¡ÏûÑ¡ÖÐ×´Ì¬¡£µ«ÊÇÒòÎª checkbox
-     * ÔÚÈ¡ÏûÑ¡ÖÐ×´Ì¬ºó£¬ä¯ÀÀÆ÷²¢²»·¢ËÍÈÎºÎ¹ØÓÚÕâ¸ö¿Ø¼þµÄÐÅÏ¢£¬µ« ActionForm ÖÐ
-     * Òª¸Ä±ä¿ØÖÆµÄ×´Ì¬£¬±ØÐë±È½Ïä¯ÀÀÆ÷´«ÉÏÀ´µÄ×´Ì¬ºÍµ±Ç°×´Ì¬£¬µ«ÒòÎªä¯ÀÀÆ÷²¢Î´
-     * ¸æÖªËü£¬ËùÒÔ ActionForm ÈÏÎªÕâ¸ö¿Ø¼þµÄ×´Ì¬²¢Î´¸Ä±ä¡£ÒòÎª´ÓÕâÊ±¿ªÊ¼£¬ÎÞÂÛ
-     * ÓÃ»§ÔõÃ´×ö£¬Õâ¸ö¿Ø¼þ½«ÓÀÔ¶±£³ÖÎªÑ¡ÖÐ×´Ì¬)
+     * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îª session ï¿½ï¿½Î§ï¿½ï¿½ formBean)ï¿½Ä»ï¿½ï¿½ï¿½ï¿½ï¿½Ôªï¿½Øµï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½Ú¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½(ï¿½ï¿½ï¿½ï¿½Ò³ï¿½ï¿½ï¿½ï¿½Ò³ï¿½ï¿½)
+     * ï¿½Ð±ï¿½ï¿½Õ¼ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½Ð¡ï¿½Ä¶Ôµï¿½ï¿½ï¿½Ð©ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã¡ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½session
+     * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î§ï¿½Úµï¿½ checkbox(ï¿½ï¿½Ñ¡ï¿½ï¿½Å¥)ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÖµÖ®Ç°ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îª falseï¿½ï¿½
+     * ï¿½ï¿½Îªï¿½Í»ï¿½ï¿½ï¿½(ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½)ï¿½Ú¸ï¿½Ñ¡ï¿½ï¿½Å¥Î´ï¿½ï¿½ï¿½ï¿½Ñ¡Ê±ï¿½ï¿½ï¿½ï¿½ï¿½á·¢ï¿½ï¿½ï¿½Îºï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë¡ï¿½(ï¿½ï¿½ï¿½ï¿½
+     * ï¿½Í³ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½â£ºï¿½ï¿½ï¿½Ö®Ç°ï¿½Ã¸ï¿½Ñ¡ï¿½ï¿½Å¥ï¿½Ç¹ï¿½Ñ¡×´Ì¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ò»Ò³ï¿½ï¿½
+     * ï¿½Ã°ï¿½Å¥ï¿½ï¿½Ê¾Îªï¿½ï¿½Ñ¡×´Ì¬ï¿½ï¿½ï¿½Úºï¿½ï¿½ï¿½ï¿½Ä²ï¿½ï¿½ï¿½ï¿½Ð£ï¿½ï¿½Ã»ï¿½È¡ï¿½ï¿½Ñ¡ï¿½ï¿½×´Ì¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îª checkbox
+     * ï¿½ï¿½È¡ï¿½ï¿½Ñ¡ï¿½ï¿½×´Ì¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ÎºÎ¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ø¼ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½ï¿½ ActionForm ï¿½ï¿½
+     * Òªï¿½Ä±ï¿½ï¿½ï¿½Æµï¿½×´Ì¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½×´Ì¬ï¿½Íµï¿½Ç°×´Ì¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Î´
+     * ï¿½ï¿½Öªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ActionForm ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½Ø¼ï¿½ï¿½ï¿½×´Ì¬ï¿½ï¿½Î´ï¿½Ä±ä¡£ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+     * ï¿½Ã»ï¿½ï¿½ï¿½Ã´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ø¼ï¿½ï¿½ï¿½ï¿½ï¿½Ô¶ï¿½ï¿½ï¿½ï¿½ÎªÑ¡ï¿½ï¿½×´Ì¬)
      */
     public void reset(ActionMapping mapping, HttpServletRequest request) {
         super.reset(mapping, request);
@@ -259,20 +261,20 @@ public class AccountActionForm extends BaseActionForm {
         setRepeatedPassword(null);
         
         // BUG here: by pprun
-        // °´ÕÕ´Ë·½·¨µÄ api ÎÄµµËµÃ÷£¬Ëµ checkbox µÄÖµ±ØÐëÔÚ´Ë¸´Î»£¬
-        //¿ÉÊÇ NewAccountForm.jsp ÖÐ Enable MyList ºÍ Enable MyBanner È´Ã»ÓÐ
-        // ËùÒÔµ±ÓÃ»§µÚÒ»´ÎÑ¡ÖÐºó£¬ÒÔºóÏë¸ÄÎªÎ´Ñ¡ÖÐÊÇÃ»ÃÅÁË£¬(³ýÁËÏó³ÌÐò¿ØÖÆÄÇÑù£º
-        // ±ÈÈç£º      acctForm.getAccount().setDisplayMylist(
+        // ï¿½ï¿½ï¿½Õ´Ë·ï¿½ï¿½ï¿½ï¿½ï¿½ api ï¿½Äµï¿½Ëµï¿½ï¿½ï¿½ï¿½Ëµ checkbox ï¿½ï¿½Öµï¿½ï¿½ï¿½ï¿½ï¿½Ú´Ë¸ï¿½Î»ï¿½ï¿½
+        //ï¿½ï¿½ï¿½ï¿½ NewAccountForm.jsp ï¿½ï¿½ Enable MyList ï¿½ï¿½ Enable MyBanner È´Ã»ï¿½ï¿½
+        // ï¿½ï¿½ï¿½Ôµï¿½ï¿½Ã»ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Ñ¡ï¿½Ðºï¿½ï¿½Ôºï¿½ï¿½ï¿½ï¿½ÎªÎ´Ñ¡ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ï¿½Ë£ï¿½(ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+        // ï¿½ï¿½ï¿½ç£º      acctForm.getAccount().setDisplayMylist(
         //          request.getParameter("account.displayMylist") != null);
         //   acctForm.getAccount().setDisplayBanner(
         //          request.getParameter("account.displayBanner") != null);)
         //
-        // µ«ÊÇµ±ÊäÈë´íÎóÊ±ÖØÐÂÏÔÊ¾µ±Ç°Ò³ÃæÊ±£¬ÉÏ´ÎÑ¡ÎªÎ´Ñ¡ÖÐ×´Ì¬±»¶ªÊ§ÁË£¡
+        // ï¿½ï¿½ï¿½Çµï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ê¾ï¿½ï¿½Ç°Ò³ï¿½ï¿½Ê±ï¿½ï¿½ï¿½Ï´ï¿½Ñ¡ÎªÎ´Ñ¡ï¿½ï¿½×´Ì¬ï¿½ï¿½ï¿½ï¿½Ê§ï¿½Ë£ï¿½
         //
-        // ÒòÎª°´ÕÕ api µÄËµÃ÷
-        // µ± checkbox ÎªÎ´Ñ¡ÖÐ×´Ì¬Ê±£¬ä¯ÀÀÆ÷ÊÇ²»»á·¢ÐÅÏ¢µ½·þÎñÆ÷¶ËµÄ£¬ËùÒÔ
-        // struts ÎÞ·¨ÉèÖÃÆäÖµ
-        // ½â¾ö°ì·¨£º
+        // ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½ api ï¿½ï¿½Ëµï¿½ï¿½
+        // ï¿½ï¿½ checkbox ÎªÎ´Ñ¡ï¿½ï¿½×´Ì¬Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç²ï¿½ï¿½á·¢ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ËµÄ£ï¿½ï¿½ï¿½ï¿½ï¿½
+        // struts ï¿½Þ·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµ
+        // ï¿½ï¿½ï¿½ï¿½ì·¨ï¿½ï¿½
         if (getAccount() != null) {
             getAccount().setDisplayMylist(false);
             getAccount().setDisplayBanner(false);

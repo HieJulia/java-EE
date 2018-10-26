@@ -22,9 +22,9 @@ public class ViewOrderAction extends SecureBaseAction {
     AccountActionForm acctForm = (AccountActionForm) form;
     long id = Integer.parseInt(request.getParameter("id")); // orderId
     
-    // ¸Ä±ä DAO ½Ó¿Ú£¬
-    //ÎªÅäºÏ order.getUser().getUsername() µÄÐèÒª£¬µ«
-    // ÓÖ±ÜÃâÊ¹ÓÃ open session in view Ä£Ê½
+    // ï¿½Ä±ï¿½ DAO ï¿½Ó¿Ú£ï¿½
+    //Îªï¿½ï¿½ï¿½ order.getUser().getUsername() ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½
+    // ï¿½Ö±ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½ open session in view Ä£Ê½
     List list = getPetStore().getOrderAndUserName(id);
     Order order = null;
     String username = null;
@@ -33,19 +33,23 @@ public class ViewOrderAction extends SecureBaseAction {
       order = (Order)pair[0];
       username = (String)pair[1];
     }
+
+    // view order acton : secure base action 
+    // exevute : form ; 
+    // orm ; get or der user 
     
-    // ³õÊ¼»¯µ¥ÏòµÄ¹ØÏµ LineItem -> Item (Ðè²»ÐèÒª³õÊ¼»¯ÊÇÓÉ Hibernate À´ÅÐ¶ÏµÄ
-    // ±ÈÈç£ºÔÚÕû¸ö¹ºÎïµÄÁ÷³Ì½á¹ûºó£¬Ò²ÒªÏÔÊ¾ ViewOrder.jsp, µ«ÄÇÊ±ÊÇ²»ÐèÒª³õÊ¼
-    // µÄ£¬ÒòÎªµ±Ê±ËùÓÐµÄÊµÌå¶¼³õÊ¼»¯³öÀ´ÁË£¬Ö»ÓÐÔÚÖ±½Ó´Ó EditAccountForm ÖÐ
-    // µÄÁ´½Ó¡¡My Orders Ê±£¬²ÅÐèÒªÏÔÊ¾µÄ³õÊ¼»¯¹ØÏµ£º LineItem -> Item )
-    // ÒòÎª LineItem ÖÐµÄ Item ±»ÉèÖÃÎª update = false, ËùÓÐÃ»ÓÐ setItem() ·½·¨£¬
-    // Òò´ËÕâÀïÁí¿ª±Ù ..., ÒÔ¹©Ò³Ãæ·ÃÎÊ
+    // ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¹ï¿½Ïµ LineItem -> Item (ï¿½è²»ï¿½ï¿½Òªï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ Hibernate ï¿½ï¿½ï¿½Ð¶Ïµï¿½
+    // ï¿½ï¿½ï¿½ç£ºï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ì½ï¿½ï¿½ï¿½ï¿½Ò²Òªï¿½ï¿½Ê¾ ViewOrder.jsp, ï¿½ï¿½ï¿½ï¿½Ê±ï¿½Ç²ï¿½ï¿½ï¿½Òªï¿½ï¿½Ê¼
+    // ï¿½Ä£ï¿½ï¿½ï¿½Îªï¿½ï¿½Ê±ï¿½ï¿½ï¿½Ðµï¿½Êµï¿½å¶¼ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë£ï¿½Ö»ï¿½ï¿½ï¿½ï¿½Ö±ï¿½Ó´ï¿½ EditAccountForm ï¿½ï¿½
+    // ï¿½ï¿½ï¿½ï¿½ï¿½Ó¡ï¿½My Orders Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½Ê¾ï¿½Ä³ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½Ïµï¿½ï¿½ LineItem -> Item )
+    // ï¿½ï¿½Îª LineItem ï¿½Ðµï¿½ Item ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îª update = false, ï¿½ï¿½ï¿½ï¿½Ã»ï¿½ï¿½ setItem() ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ..., ï¿½Ô¹ï¿½Ò³ï¿½ï¿½ï¿½ï¿½ï¿½
     List<Item> items = new ArrayList<Item>();
     List<String> productNames = new ArrayList<String>();
     
     List<LineItem> ls = order.getLineItems();
     for (LineItem li : ls) {
-      // detached entiry, ÔÚ getPetStore().getItem(i) ±»ÔÙ´Î¹ØÁªµ½ session
+      // detached entiry, ï¿½ï¿½ getPetStore().getItem(i) ï¿½ï¿½ï¿½Ù´Î¹ï¿½ï¿½ï¿½ï¿½ï¿½ session
       Item i = li.getItem();
       Object[] pair = (Object[])getPetStore().getItem(i).get(0);
       Item item = (Item)pair[0];
@@ -53,14 +57,14 @@ public class ViewOrderAction extends SecureBaseAction {
       items.add(item);
       productNames.add(pn);
     }
-    // ·ÅÈë request attribut
+    // ï¿½ï¿½ï¿½ï¿½ request attribut
     request.setAttribute("items", items);
     request.setAttribute("productNames", productNames);
     
     if (acctForm.getAccount().getUsername().equals(username)) {
       request.setAttribute("order", order);
       
-      // Ñ¡Ôñ ViewOrder.jsp ÖÐµÄÏÔÊ¾·½Ê½
+      // Ñ¡ï¿½ï¿½ ViewOrder.jsp ï¿½Ðµï¿½ï¿½ï¿½Ê¾ï¿½ï¿½Ê½
       request.setAttribute("viewOrder", true);
       return mapping.findForward("success");
     } else {
@@ -68,5 +72,8 @@ public class ViewOrderAction extends SecureBaseAction {
       return mapping.findForward("failure");
     }
   }
+  // request set in - . get user name 
+  // request. set attributed 
+  // mapping fine forward 
   
 }

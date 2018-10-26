@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping SYSTEM
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+
+
+<hibernate-mapping package="org.springframework.samples.jpetstore.domain">
+  
+  <class name="Customer" table="customer" lazy="true">
+    <cache usage="read-write"/>
+    <id name="id" type="long" column="customerId" unsaved-value="null" access="field">
+      <generator class="native" />
+    </id>
+    
+    <!-- A versioned entity. -->
+    <version name="version" access="org.hibernate.property.DirectPropertyAccessor" />
+    
+    <!-- We don't change the username, so map it with update="false".
+        This is an immutable property, it is also unique.
+        If your DBMS supports regex functions, add this:
+        check="REGEXP_LIKE(ENAME,'^[[:alpha:]]+$')"
+    -->
+    <property name="username" type="string" length="80" update="false" access="field">
+      <column name="username" length="80" not-null="true" unique="true" />
+    </property>
+
+    <property name="firstname" type="string" length="80" update="false" access="field">
+      <column name="firstname" length="80" not-null="true" unique="true" />
+    </property>
+    
+   <!--Relationship with entity -->
+    <many-to-one
+      name="favCategory"
+      column="favCategoryId"
+      class="Category"
+      foreign-key="FK_favCategoryId"/>
+    
+    <property name="displayMylist" type="boolean" />
+    
+    <property name="displayBanner" type="boolean" />
+    
+    <!-- Mapping for Order association. -->
+    <set name="orders"
+         inverse="true"
+         cascade="save-update"
+         access="field">
+      <key column="userId" />
+      <one-to-many class="Order"/>
+    </set>
+  </class>
+</hibernate-mapping>

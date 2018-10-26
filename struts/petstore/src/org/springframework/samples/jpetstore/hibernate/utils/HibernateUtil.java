@@ -1,7 +1,7 @@
 /*
  * HibernateUtil.java
  *
- * Created on 2006Äê10ÔÂ4ÈÕ, ÉÏÎç3:36
+ * Created on 2006ï¿½ï¿½10ï¿½ï¿½4ï¿½ï¿½, ï¿½ï¿½ï¿½ï¿½3:36
  *
  * To change this template, choose Tools | Template Manager
  * and open the template in the editor.
@@ -64,6 +64,7 @@ public class HibernateUtil {
   private static Configuration configuration;
   
   private static SessionFactory sessionFactory;
+  // sessionFactory - configuration - String calss 
   
   static {
     // Create the initial SessionFactory from the default configuration
@@ -137,6 +138,7 @@ public class HibernateUtil {
       throw new IllegalStateException("SessionFactory not available.");
     return sf;
   }
+  // config session factory 
   
   /**
    * Closes the current SessionFactory and releases all resources.
@@ -187,6 +189,8 @@ public class HibernateUtil {
       configuration = cfg;
     }
   }
+
+  // rebuild session factory - cfg : sesion 
   
   /**
    * Register a Hibernate interceptor with the current SessionFactory.

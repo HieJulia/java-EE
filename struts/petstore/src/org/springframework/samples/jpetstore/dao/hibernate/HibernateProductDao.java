@@ -8,8 +8,8 @@ import org.springframework.orm.hibernate3.support.HibernateDaoSupport;
 import org.springframework.samples.jpetstore.dao.ProductDao;
 
 /**
- * domain µÄÓïÒå·¢ÉúÁË¸Ä±ä£¬productId ³ÉÁË productNumber£¬¶ø productId ³ÉÁË
- * ÓÉ hibernate ×Ô¶¯Î¬»¤µÄ id Öµ£¬Òò´ËÔ­ÏÈµÄ productId ÏÖÔÚÓë productNumber Í¬.
+ * domain ï¿½ï¿½ï¿½ï¿½ï¿½å·¢ï¿½ï¿½ï¿½Ë¸Ä±ä£¬productId ï¿½ï¿½ï¿½ï¿½ productNumberï¿½ï¿½ï¿½ï¿½ productId ï¿½ï¿½ï¿½ï¿½
+ * ï¿½ï¿½ hibernate ï¿½Ô¶ï¿½Î¬ï¿½ï¿½ï¿½ï¿½ id Öµï¿½ï¿½ï¿½ï¿½ï¿½Ô­ï¿½Èµï¿½ productId ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ productNumber Í¬.
  */
 public class HibernateProductDao extends HibernateDaoSupport implements ProductDao {
   
@@ -19,17 +19,17 @@ public class HibernateProductDao extends HibernateDaoSupport implements ProductD
   }
   
   /**
-   * ¸Ä±ä DAO µÄ½Ó¿Ú£¬·µ»ØÒ»¸öList£¬°üº¬ product  ºÍ categoryName
-   * // Îª½â¾öÖøÃûµÄ: org.hibernate.LazyInitializationException:
+   * ï¿½Ä±ï¿½ DAO ï¿½Ä½Ó¿Ú£ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Listï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ product  ï¿½ï¿½ categoryName
+   * // Îªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: org.hibernate.LazyInitializationException:
    * //               could not initialize proxy - the owning Session was closed
-   * // (ÓÉÒ³Ãæ Product.jsp ÖÐ ${product.category.categoryName} ÒýÆð).
+   * // (ï¿½ï¿½Ò³ï¿½ï¿½ Product.jsp ï¿½ï¿½ ${product.category.categoryName} ï¿½ï¿½ï¿½ï¿½).
    * //
-   * // ËäÈ»²ÉÓÃ "Open Session in View pattern" Ä£Ê½, ¶ÔÓ¦ Spring ÖÐ¼´£º
+   * // ï¿½ï¿½È»ï¿½ï¿½ï¿½ï¿½ "Open Session in View pattern" Ä£Ê½, ï¿½ï¿½Ó¦ Spring ï¿½Ð¼ï¿½ï¿½ï¿½
    * // @see org.springframework.orm.hibernate3.support.OpenSessionInViewFilter
    * // @see org.springframework.orm.hibernate3.support.OpenSessionInViewInterceptor
-   * // µ«Æä²¢²»ÊÇ¸ßÍÌÍÂÁ¿Ó¦ÓÃµÄÊ×Ñ¡·½°¸
-   * // Òò´ËÕâÀïÒª°Ñ many-to-one ¹ØÏµµÄÒ»¶Ë¼ÓÈëµ½ request attribute, ÒÔ±ãÒ³Ãæ¿É
-   * // ·ÃÎÊ.
+   * // ï¿½ï¿½ï¿½ä²¢ï¿½ï¿½ï¿½Ç¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½Ãµï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½
+   * // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ many-to-one ï¿½ï¿½Ïµï¿½ï¿½Ò»ï¿½Ë¼ï¿½ï¿½ëµ½ request attribute, ï¿½Ô±ï¿½Ò³ï¿½ï¿½ï¿½
+   * // ï¿½ï¿½ï¿½ï¿½.
    * todo: pp renamed productId to productNumber
    */
   public List getProduct(String productNumber) throws DataAccessException {
@@ -43,13 +43,14 @@ public class HibernateProductDao extends HibernateDaoSupport implements ProductD
 //            "where c.id = p.category.id and p.productNumber = ?", productNumber)
 //            .get(0);
   }
+  // get product by product number select from product category where 
 
   /**
-   * È¥µôÔ­°æÖÐ iBatis ·½±ãÓ³ÉäµÄÄÚ²¿Àà£¬È¡¶ø´úÖ®ÊÖ¹¤×é×° like '%' µÄ
-   * Æ¥ÅäµÄ×Ö·û´®.
+   * È¥ï¿½ï¿½Ô­ï¿½ï¿½ï¿½ï¿½ iBatis ï¿½ï¿½ï¿½ï¿½Ó³ï¿½ï¿½ï¿½ï¿½Ú²ï¿½ï¿½à£¬È¡ï¿½ï¿½ï¿½ï¿½Ö®ï¿½Ö¹ï¿½ï¿½ï¿½×° like '%' ï¿½ï¿½
+   * Æ¥ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½.
    */
   public List searchProductList(String keywords) throws DataAccessException {
-    // ×é×°²éÑ¯ like(%) ×Ö·û´®
+    // ï¿½ï¿½×°ï¿½ï¿½Ñ¯ like(%) ï¿½Ö·ï¿½ï¿½ï¿½
     StringBuilder likeString = new StringBuilder();
     
     Scanner s = new Scanner(keywords);
@@ -66,10 +67,13 @@ public class HibernateProductDao extends HibernateDaoSupport implements ProductD
             "from Product p, Category c " +
             "where c.id = p.category.id and ( " + likeString.toString() + " )");
   }
+
+  // search product - select distinc p from product , category where id  category id and upper(proudctnMae) like % keyword %
+  // or upper ( product )
   
   
   /**
-   * ÄÚ²¿Àà£¬´ÓÊäÈëµÄËÑË÷¹Ø¼ü×Ö£¬µÃµ½²éÑ¯×Ö·û´®.
+   * ï¿½Ú²ï¿½ï¿½à£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ø¼ï¿½ï¿½Ö£ï¿½ï¿½Ãµï¿½ï¿½ï¿½Ñ¯ï¿½Ö·ï¿½ï¿½ï¿½.
    * not used in hibernate
    */
 //  public static class ProductSearch {

@@ -114,7 +114,6 @@ https://github.com/mainmacj/loanapp
 https://github.com/oravj/cargotracker-ee8
 https://github.com/otaviojava/NOSQL-BA-JavaEE-Cassandra
 https://github.com/shekhargulati/hackerpins-demo-app
-https://github.com/zjiehang/JavaEE
 
 
 

@@ -12,8 +12,8 @@ import org.springframework.samples.jpetstore.domain.LineItem;
 import org.springframework.samples.jpetstore.domain.Order;
 
 /**
- * domain µÄÓïÒå·¢ÉúÁË¸Ä±ä£¬itemId ³ÉÁË itemName£¬¶ø itemId ³ÉÁË
- * ÓÉ hibernate ×Ô¶¯Î¬»¤µÄ id Öµ£¬Òò´ËÔ­ÏÈµÄ itemId ÏÖÔÚÓë itemName Í¬.
+ * domain ï¿½ï¿½ï¿½ï¿½ï¿½å·¢ï¿½ï¿½ï¿½Ë¸Ä±ä£¬itemId ï¿½ï¿½ï¿½ï¿½ itemNameï¿½ï¿½ï¿½ï¿½ itemId ï¿½ï¿½ï¿½ï¿½
+ * ï¿½ï¿½ hibernate ï¿½Ô¶ï¿½Î¬ï¿½ï¿½ï¿½ï¿½ id Öµï¿½ï¿½ï¿½ï¿½ï¿½Ô­ï¿½Èµï¿½ itemId ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ itemName Í¬.
  *
  */
 public class HibernateItemDao extends HibernateDaoSupport implements ItemDao {
@@ -26,14 +26,14 @@ public class HibernateItemDao extends HibernateDaoSupport implements ItemDao {
       Item item = lineItem.getItem();
       Integer increment = new Integer(lineItem.getQuantity());
       
-      // ¼ÓÔØ¶ÔÓ¦µÄ innventory
+      // ï¿½ï¿½ï¿½Ø¶ï¿½Ó¦ï¿½ï¿½ innventory
       List ls = getHibernateTemplate().find(
               "from Inventory inv where inv.item.itemName = ?",
-              item.getItemName()); // Ô­ÏÈµÄitemId£¬ÏÖÔÚÎª itemName
+              item.getItemName()); // Ô­ï¿½Èµï¿½itemIdï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Îª itemName
       if (ls != null && ls.size() > 0) {
         Inventory inv = (Inventory) ls.get(0);
         
-        // ½«¿â´æÊý¼õÈ¥¸ø¶¨µÄÖµ
+        // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½È¥ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Öµ
         inv.setQuantity(inv.getQuantity() - increment);
         getHibernateTemplate().saveOrUpdate(inv);
       }
@@ -61,7 +61,7 @@ public class HibernateItemDao extends HibernateDaoSupport implements ItemDao {
 //      Item item = (Item)ls.get(0);
 //
 //      ls = null;
-//      // ¼ÓÔØ¶ÔÓ¦µÄ innventory
+//      // ï¿½ï¿½ï¿½Ø¶ï¿½Ó¦ï¿½ï¿½ innventory
 //      ls = getHibernateTemplate().find(
 //              "select ity.quantity from Inventory ity where ity.item = ?", item);
 //      if (ls != null) {
@@ -83,19 +83,19 @@ public class HibernateItemDao extends HibernateDaoSupport implements ItemDao {
             "where item.product.id = product.id " +
             "and product.productNumber = ?", productNumber);
     
-    // ²»ÐèÒªÕâÑùµÄ±¿·½·¨ÁË£¬
-    // Í¨¹ýÉèÖÃ log4j 's log4j.logger.org.hibernate.type=all' Ð§¹ûºÜÇå³þ
+    // ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ï¿½Ä±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ë£ï¿½
+    // Í¨ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ log4j 's log4j.logger.org.hibernate.type=all' Ð§ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
     //    System.out.println(">>>>>>>>>>>>>>>" + list.size());
     return list;
   }
   
   /**
-   * ¸Ä±ä DAO ½Ó¿Ú£¬ÒòÎª view ÐèÒª product
+   * ï¿½Ä±ï¿½ DAO ï¿½Ó¿Ú£ï¿½ï¿½ï¿½Îª view ï¿½ï¿½Òª product
    *
-   * ÓÉÓÚ½«Ô­°æ±¾ÖÐµÄ»ìºÏÄ£ÐÍÒ»·ÖÎª¶þ£º
-   * item ºÍ ´Ó inventory ÖÐµÃµ½ quantity
-   * ËùÒÔÔÚ¿Í»§¶Ëµ÷ÓÃÊ±£¬³ýÐèÒªµ÷ÓÃ´Ë·½·¨Íâ£¬
-   * »¹ÐèÒªµ÷ÓÃ getItemQuantity(String itemName)£¬ÒÔ´ïµ½Í¬ÑùµÄÂß¼­.
+   * ï¿½ï¿½ï¿½Ú½ï¿½Ô­ï¿½æ±¾ï¿½ÐµÄ»ï¿½ï¿½Ä£ï¿½ï¿½Ò»ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½
+   * item ï¿½ï¿½ ï¿½ï¿½ inventory ï¿½ÐµÃµï¿½ quantity
+   * ï¿½ï¿½ï¿½ï¿½ï¿½Ú¿Í»ï¿½ï¿½Ëµï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½Ã´Ë·ï¿½ï¿½ï¿½ï¿½â£¬
+   * ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½ getItemQuantity(String itemName)ï¿½ï¿½ï¿½Ô´ïµ½Í¬ï¿½ï¿½ï¿½ï¿½ï¿½ß¼ï¿½.
    *
    * select
    * i.itemid, listprice, unitcost, supplier, i.productid, name,
@@ -131,20 +131,20 @@ public class HibernateItemDao extends HibernateDaoSupport implements ItemDao {
   
   /**
    * added by pprun:
-   * Îª±ÜÃâÊ¹ÓÃ open session in view Ä£Ê½£¬µ«ÓÖÒªÅäºÏ viewOrder.jsp ÖÐ:
+   * Îªï¿½ï¿½ï¿½ï¿½Ê¹ï¿½ï¿½ open session in view Ä£Ê½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ viewOrder.jsp ï¿½ï¿½:
    * lineItem.item.product.productName
    * lineItem.item.*
-   * ±í´ïÊ½µÄ·ÃÎÊ.
-   * ×¢Òâ£¬ÔÚÕû¸ö¹ºÎïÁ÷³ÌÖÐ£¬ÊÇ²»ÐèÒª´Ë·½·¨µÄ£¬ÒòÎªÔÚÄÇ¸ö¹ý³ÌÖÐ item ÒÑ¾­³õÊ¼»¯
-   * ºÃÁË¡£
-   * Ö»ÊÇÔÚ²é¿´ÓÃ»§ÐÅÏ¢Ê±µÄ listOrder.jsp ÖÐ£¬µã»÷ÏàÓ¦µÄ¹ºÎïÇåµ¥Ê±
-   * (viewOrder.jsp)²Å»áÊ¹ÓÃ.
+   * ï¿½ï¿½ï¿½Ê½ï¿½Ä·ï¿½ï¿½ï¿½.
+   * ×¢ï¿½â£¬ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð£ï¿½ï¿½Ç²ï¿½ï¿½ï¿½Òªï¿½Ë·ï¿½ï¿½ï¿½ï¿½Ä£ï¿½ï¿½ï¿½Îªï¿½ï¿½ï¿½Ç¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ item ï¿½Ñ¾ï¿½ï¿½ï¿½Ê¼ï¿½ï¿½
+   * ï¿½ï¿½ï¿½Ë¡ï¿½
+   * Ö»ï¿½ï¿½ï¿½Ú²é¿´ï¿½Ã»ï¿½ï¿½ï¿½Ï¢Ê±ï¿½ï¿½ listOrder.jsp ï¿½Ð£ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½Ä¹ï¿½ï¿½ï¿½ï¿½åµ¥Ê±
+   * (viewOrder.jsp)ï¿½Å»ï¿½Ê¹ï¿½ï¿½.
    *
    */
   public List getItem(Item item) throws DataAccessException {
-    // ¸¶ÖîÓÚÊµ¼ù£º retrive detached entity
-    // ÒòÎª item ÊÇÍ¨¹ýÉÏÒ»´ÎµÄ session ÖÐ»ñµÃµÄ LineItem ÖÐµÃµ½µÄ(detached)£¬
-    // ËùÒÔÐèÒªÖØÐÂ¹ØÁªµ½µ½µ±Ç° session
+    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Êµï¿½ï¿½ï¿½ï¿½ retrive detached entity
+    // ï¿½ï¿½Îª item ï¿½ï¿½Í¨ï¿½ï¿½ï¿½ï¿½Ò»ï¿½Îµï¿½ session ï¿½Ð»ï¿½Ãµï¿½ LineItem ï¿½ÐµÃµï¿½ï¿½ï¿½(detached)ï¿½ï¿½
+    // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½Â¹ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ç° session
     getHibernateTemplate().lock(item, LockMode.NONE);
     List ls = getHibernateTemplate().find(
             "select item, item.product.productName " +
@@ -152,14 +152,16 @@ public class HibernateItemDao extends HibernateDaoSupport implements ItemDao {
             "where item.id = ?", item.getId());
     
     return ls;
+    // get item : item : 
+    // select from werhe 
   }
   
   /**
    * added by pprun
-   * ÓÉÓÚ½«Ô­°æ±¾ÖÐµÄ»ìºÏÄ£ÐÍÒ»·ÖÎª¶þ£º
-   * item ºÍ ´Ó inventory ÖÐµÃµ½ quantity
-   * ËùÒÔÔÚ¿Í»§¶Ëµ÷ÓÃÊ±£¬³ýÐèÒªµ÷ÓÃgetItem(String itemName)·½·¨Íâ£¬
-   * »¹ÐèÒªµ÷ÓÃ´Ë·½·¨£¬ÒÔ´ïµ½Í¬ÑùµÄÂß¼­.
+   * ï¿½ï¿½ï¿½Ú½ï¿½Ô­ï¿½æ±¾ï¿½ÐµÄ»ï¿½ï¿½Ä£ï¿½ï¿½Ò»ï¿½ï¿½Îªï¿½ï¿½ï¿½ï¿½
+   * item ï¿½ï¿½ ï¿½ï¿½ inventory ï¿½ÐµÃµï¿½ quantity
+   * ï¿½ï¿½ï¿½ï¿½ï¿½Ú¿Í»ï¿½ï¿½Ëµï¿½ï¿½ï¿½Ê±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½ï¿½getItem(String itemName)ï¿½ï¿½ï¿½ï¿½ï¿½â£¬
+   * ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ï¿½Ã´Ë·ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ô´ïµ½Í¬ï¿½ï¿½ï¿½ï¿½ï¿½ß¼ï¿½.
    */
   public int getItemQuantity(String itemName) throws DataAccessException {
     int quantity = 0;
@@ -176,4 +178,6 @@ public class HibernateItemDao extends HibernateDaoSupport implements ItemDao {
     
     return quantity;
   }
+  // get item quatity name 
+  // get hibernate template : find : seletio from where- 
 }

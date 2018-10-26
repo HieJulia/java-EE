@@ -24,17 +24,17 @@ public class ViewProductAction extends BaseAction {
               getItemListByProduct(productNumber));
       itemList.setPageSize(4);
       
-      // ¸Ä±ä DAO µÄ½Ó¿Ú£¬·µ»ØÒ»¸öList£¬°üº¬ product  ºÍ categoryName
-      // Îª½â¾öÖøÃûµÄ: org.hibernate.LazyInitializationException:
+      // ï¿½Ä±ï¿½ DAO ï¿½Ä½Ó¿Ú£ï¿½ï¿½ï¿½ï¿½ï¿½Ò»ï¿½ï¿½Listï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ product  ï¿½ï¿½ categoryName
+      // Îªï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½: org.hibernate.LazyInitializationException:
       //               could not initialize proxy - the owning Session was closed
-      // (ÓÉÒ³Ãæ Product.jsp ÖÐ ${product.category.categoryName} ÒýÆð).
+      // (ï¿½ï¿½Ò³ï¿½ï¿½ Product.jsp ï¿½ï¿½ ${product.category.categoryName} ï¿½ï¿½ï¿½ï¿½).
       //
-      // ËäÈ»²ÉÓÃ "Open Session in View pattern" Ä£Ê½, ¶ÔÓ¦ Spring ÖÐ¼´£º
+      // ï¿½ï¿½È»ï¿½ï¿½ï¿½ï¿½ "Open Session in View pattern" Ä£Ê½, ï¿½ï¿½Ó¦ Spring ï¿½Ð¼ï¿½ï¿½ï¿½
       // @see org.springframework.orm.hibernate3.support.OpenSessionInViewFilter
       // @see org.springframework.orm.hibernate3.support.OpenSessionInViewInterceptor
-      // µ«Æä²¢²»ÊÇ¸ßÍÌÍÂÁ¿Ó¦ÓÃµÄÊ×Ñ¡·½°¸
-      // Òò´ËÕâÀïÒª°Ñ many-to-one ¹ØÏµµÄÒ»¶Ë¼Ó(category.categoryName)Èëµ½ 
-      // request attribute, ÒÔ±ãÒ³Ãæ¿É·ÃÎÊ.
+      // ï¿½ï¿½ï¿½ä²¢ï¿½ï¿½ï¿½Ç¸ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½Ãµï¿½ï¿½ï¿½Ñ¡ï¿½ï¿½ï¿½ï¿½
+      // ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Òªï¿½ï¿½ many-to-one ï¿½ï¿½Ïµï¿½ï¿½Ò»ï¿½Ë¼ï¿½(category.categoryName)ï¿½ëµ½ 
+      // request attribute, ï¿½Ô±ï¿½Ò³ï¿½ï¿½É·ï¿½ï¿½ï¿½.
       List list = getPetStore().getProduct(productNumber);
       Product product = null;
       String categoryName = null;
@@ -43,6 +43,8 @@ public class ViewProductAction extends BaseAction {
         product = (Product)pair[0];
         categoryName = (String)pair[1];
       }
+
+      // 
       
       // -- for debug
 //      System.out.println(categoryName);
@@ -68,7 +70,7 @@ public class ViewProductAction extends BaseAction {
       request.setAttribute("itemList", itemList);
       request.setAttribute("product", product);
     }
-    // ·ÀÖ¹¶àÖØÌá½»
+    // ï¿½ï¿½Ö¹ï¿½ï¿½ï¿½ï¿½ï¿½á½»
     saveToken(request);
     //System.out.println(request.getSession().getAttribute(Globals.TRANSACTION_TOKEN_KEY));
     return mapping.findForward("success");
