@@ -93,15 +93,10 @@ https://github.com/Savindamad/SRMS-Website
 https://github.com/DanielCarrilloHerrera/EcommerceJEE
 https://github.com/eatsleepcode102/java-javaee
 https://github.com/bim89/MyQuizGame
-https://github.com/yqian1991/javaweb
-https://github.com/ruben5jami/CouponPlatform
 https://github.com/PacktPublishing/Java-EE-7-Development-with-NetBeans-8
 https://github.com/aminechaker/Projet-ERP
 https://github.com/BlcDec/MyJavaEEBlog
 https://github.com/Apress/beg-java-ee-5
-https://github.com/svanimpe/reminders
-https://github.com/gongchuanjing/InterestingJavaEE
-https://github.com/zhang13690/OldJavaEEPrimaryTutorial
 https://github.com/claudioaltamura/javaee
 https://github.com/rachedanis/J2EE-samples
 https://github.com/Berdir/hslu_enapp_webshop
@@ -161,7 +156,6 @@ RESTful
 
 
 Hibernate 
-https://github.com/TheGuysBrushes/CrowdfundingWebApp
 
 
 
