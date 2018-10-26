@@ -4,3 +4,4 @@
 <mapper namespace="com.dao.impl.AreaDaoImpl">
 
 </mapper>
+

@@ -67,10 +67,11 @@ public class SelectSeatServlet extends HttpServlet {
 				//获取电影院信息
 				statement="com.dao.impl.CinemaDaoImpl.getCinemaByName";
 				CinemaEntity cinema=s.selectOne(statement,cinemaName);
+				// entity 
 				
 				//获取已售座位
 				OrderDao order=new OrderDao();
-				List<String> seats=order.getSeatsByMovieIDAndPlayTimeAndCinemaID(movie.id, date, cinema.id);
+				List<String> seats=order.getSeatsByMovieIDAndPlayTimeAndCinemaID(movie.id, date, cinema.id);// order tet 
 				List<String> seatList=new ArrayList<>();
 				if(seats!=null) {
 					for(String item : seats) {

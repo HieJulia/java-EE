@@ -10,6 +10,8 @@ public class OrderEntity {
 	private int getNum;
 	private String remarks;
 	private int cinemaID;
+
+	// Order L id , movieID, customer Id, cinemaid 
 	
 	public int getId() {
 		return id;

@@ -54,7 +54,7 @@ public class OrdinaryLoginAndRoleFilter implements Filter {
 	 * @see Filter#init(FilterConfig)
 	 */
 	public void init(FilterConfig fConfig) throws ServletException {
-		System.out.println("权限过滤器");
+		
 	}
 
 }

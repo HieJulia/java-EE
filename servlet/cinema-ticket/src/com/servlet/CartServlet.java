@@ -42,6 +42,7 @@ public class CartServlet extends HttpServlet {
 		String playTime=request.getParameter("playTime");
 		String seats=request.getParameter("seats");
 		String movieTotalPrice=request.getParameter("movieTotalPrice");
+		// request - get param : cinema name - movieID - area - playtime- 
 		
 		if(playTime!=null&&cinemaName!=null&&movieID!=null&&areaName!=null&&seats!=null&&movieTotalPrice!=null
 				&&playTime!=""&&cinemaName!=""&&movieID!=""&&areaName!=""&&seats!=""&&movieTotalPrice!="") {
@@ -64,6 +65,10 @@ public class CartServlet extends HttpServlet {
 				request.setAttribute("cartList", CartInfo.cartList);
 				
 				request.getRequestDispatcher("/OrdinaryPage/Cart.jsp").forward(request, response);
+				// string statemet ; selectio - 
+				// statement - select One - 
+				// orderby cart - request.setAttributed- 
+				// request . getRequestDispatcher 
 			}
 			catch(NumberFormatException e) {
 				request.setAttribute("exceptionInfo", "错误的数字");

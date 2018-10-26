@@ -9,8 +9,8 @@ public class DataSourceHolder {
 	private DataSourceHolder() {
 		ds.setDriverClassName("com.mysql.jdbc.Driver");
 		ds.setUrl("jdbc:mysql://127.0.0.1:3306/movieticketdb");
-		ds.setUsername("JavaEE");
-		ds.setPassword("JavaEE");
+		ds.setUsername("root");
+		ds.setPassword("password");
 	}
 	
 	private static class SingletonHolder{
@@ -25,3 +25,6 @@ public class DataSourceHolder {
 		return ds;
 	}
 }
+
+
+// data source holder : set url : set 

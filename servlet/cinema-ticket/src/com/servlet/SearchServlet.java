@@ -41,13 +41,17 @@ public class SearchServlet extends HttpServlet {
 		if(typeString!=null&&areaString!=null&&typeString.equals("全部")&&!areaString.equals("全部")) {
 			System.out.println("根据地区查找电影："+typeString+","+areaString);
 			//根据地区获取电影
+			// statemetn: get movie by are 
 			String statement="com.dao.impl.MovieDaoImpl.getMovieByArea";
 			List<MovieEntity> movieList=s.selectList(statement, areaString);
 			
 			request.setAttribute("movies", movieList);
+			// 
 			
 			request.getRequestDispatcher("/Partial/_Movies.jsp").forward(request, response);
 		}
+		// search servlet :get param : 
+		// validatin
 		else if(typeString!=null&&areaString!=null&&!typeString.equals("全部")&&areaString.equals("全部")) {
 			//获取类型ID
 			System.out.println("根据类型查找电影："+typeString+","+areaString);

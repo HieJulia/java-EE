@@ -9,8 +9,8 @@
       	<dataSource type="POOLED">
       		<property name="driver" value="com.mysql.jdbc.Driver"/>
       		<property name="url" value="jdbc:mysql://127.0.0.1:3306/movieticketdb" />
-      		<property name="username" value="JavaEE" />
-      		<property name="password" value="JavaEE" />
+      		<property name="username" value="root" />
+      		<property name="password" value="password" />
       	</dataSource>
       </environment>
    </environments>

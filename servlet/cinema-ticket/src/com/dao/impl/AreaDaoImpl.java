@@ -7,14 +7,7 @@ import org.apache.ibatis.annotations.Select;
 
 import com.Entity.AreaEntity;
 
-/**
- * @author   李家俊(Drajun)
- * @Date     2017年12月20日下午3:06:20
- * @QQ       1071211919
- * @Emali    longlou.d@foxmail.com
- * 操作地区数据的接口
- * @Version  1.0
- */
+
 public interface AreaDaoImpl {
 	//查找所有地区
 	@Select("select * from area")
@@ -31,4 +24,6 @@ public interface AreaDaoImpl {
 	//根据地区名称查地区
 	@Select("select * from area where areaName=#{para}")
 	AreaEntity getAreaByName(String name);
+
+	// interface : selection from where 
 }

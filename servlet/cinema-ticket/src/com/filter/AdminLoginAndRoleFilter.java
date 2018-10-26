@@ -18,7 +18,7 @@ import javax.servlet.http.HttpSession;
 @WebFilter(urlPatterns= {"/MovieManage/*","/MovieManageServlet","/AddMovieServlet","/AddNewMovieServlet","/DetailsServlet",
 		"/DeleteServlet"})
 public class AdminLoginAndRoleFilter implements Filter {
-
+// filter with password : webfilter : 
     /**
      * Default constructor. 
      */
@@ -40,13 +40,14 @@ public class AdminLoginAndRoleFilter implements Filter {
 		System.out.println("管理员权限过滤器");
 		HttpServletRequest req=(HttpServletRequest)request;
 		HttpServletResponse resp=(HttpServletResponse)response;
-		HttpSession session=req.getSession();
+		HttpSession session=req.getSession();// get session 
+		// allow admin
 		if(session.getAttribute("userName")!=null&&session.getAttribute("role").equals("admin")) {
 			chain.doFilter(request, response);			
 		}
 		else {
 			req.setAttribute("msg", "尚无访问该页面权限");
-			req.getRequestDispatcher("/Login.jsp").forward(req, resp);
+			req.getRequestDispatcher("/Login.jsp").forward(req, resp);// redirect back to login.jsp page 
 		}
 	}
 
@@ -58,3 +59,5 @@ public class AdminLoginAndRoleFilter implements Filter {
 	}
 
 }
+
+
