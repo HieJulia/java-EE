@@ -5,6 +5,9 @@ BOOK (done checking)
             DONE check source code 
             Ko co project portfolio 
         2 Architecturing modern Java ee applications(DANG DOC) - dang check source code - done check source code - PROJECT PORTFOLIO 
+            DONE check source code 
+            Co project portfolio 
+            DANG DOC 
         3 Java EE 8 cookbook (dang check ) - dang check source code - done check source code - PRACTICE - AP DUNG PROJECT PORTFOLIO 
     4 Java EE 8 High performance - VERY BIG PROJECT - PROJECT PORTFOLIO (da doc so qua )- bay gio den lam project portfolio - practice book 
     5 Java EE 8 and angular (dang check) - bay gio den check source code -  PROJECT PORTFOLIO
@@ -214,7 +217,8 @@ Project portfolio :
 + Java EE - CDI - 1 project 
 + Java EE - servlet 
 + Java EE - JSP  - 1 project 
-
++ Java EE - SQL 
++ Java EE - Testing 
 + 
 
 + Java EE - JMS 
