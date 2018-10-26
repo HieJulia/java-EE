@@ -1,7 +1,7 @@
 BOOK (done checking)
     -> Lam cai nay va hoc cai nay 
         1 Java EE 8 application development (done reading ) - done check source code - ko co project portfolio 
-            DONE reading 
+            DONE READING
             DONE check source code 
             Ko co project portfolio 
         2 Architecturing modern Java ee applications(DANG DOC) - dang check source code - done check source code - PROJECT PORTFOLIO 
@@ -130,7 +130,6 @@ https://github.com/jeqo/java-ee-rxjava-kafka-avro
 https://github.com/blacker-cz/pis-library
 https://github.com/lreimer/building-javaee-microservices
 https://github.com/bigGreenPeople/javaEE
-
 https://github.com/ttatus/quiz
 https://github.com/adabeauty/JavaEE_Spring
 https://www.youtube.com/watch?v=JN1iUUitgvY
@@ -140,7 +139,8 @@ https://github.com/cdi-spec/cdi/tree/61a3d19384c11e24c3710064321dac36ac668a3b
 https://github.com/521v587/JavaEE-e3mall
 https://github.com/bjau/BunchOfFriends
 https://github.com/Apress/beg-java-ee-6-w-glassfish-3
-https://github.com/pizirun/hjpetstore1
+https://github.com/liimaorg/liima
+
 
 
 
@@ -178,6 +178,10 @@ https://github.com/Abachouch/ecommerce-java2ee-jsf
 
 
 
+J2EE 
+https://github.com/exarus/java-ee-quickstart
+https://github.com/PacktPublishing/Java-EE-8-High-Performance
+https://github.com/ti-dev/Scrum-it
 
 
 
@@ -195,9 +199,6 @@ Book :
     + Java EE recipes : co the dung lam base project - co the add vao base projecrt
     + Java EE 8 development with eclipse
     + 
-
-
-
 
 
 
