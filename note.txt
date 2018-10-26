@@ -132,6 +132,8 @@ https://github.com/cdi-spec/cdi/tree/61a3d19384c11e24c3710064321dac36ac668a3b
 https://github.com/521v587/JavaEE-e3mall
 https://github.com/bjau/BunchOfFriends
 https://github.com/Apress/beg-java-ee-6-w-glassfish-3
+https://github.com/liimaorg/liima
+https://github.com/josueeduardo/Java-EE
 
 
 
