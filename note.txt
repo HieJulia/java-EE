@@ -77,63 +77,27 @@ Keyword : tomcat - jboss - glashfish - sql - no sql - application server
 Ap dung practice project 
 
 practice with intellij : https://github.com/Isaias2018/JavaEE-JakartaEE-
-https://github.com/mrts/vaadin-javaee-clinic-patient-queue-example
-https://github.com/lreimer/data-services-javaee7
-https://github.com/qa/pv243-2015-infinispan-seminar
-https://github.com/Prodev2017/Software_Java_Design
-https://github.com/AdamczykMaciej/JavaNetworks
-https://github.com/yangwm/JavaEELearn
-https://github.com/MasatoshiTada/jjug-action-based-mvc
-https://github.com/kirillman1/InternetShop
-https://github.com/WASdev/sample.mono-to-ms.pbw-monolith
-https://github.com/cgpradeepkumar/javaEESamples
-https://github.com/ekapinos/A005-EE-beginning-java-ee-7
-https://github.com/creeew/Shopping
-https://github.com/Savindamad/SRMS-Website
-https://github.com/DanielCarrilloHerrera/EcommerceJEE
-https://github.com/eatsleepcode102/java-javaee
-https://github.com/bim89/MyQuizGame
-https://github.com/PacktPublishing/Java-EE-7-Development-with-NetBeans-8
-https://github.com/aminechaker/Projet-ERP
-https://github.com/BlcDec/MyJavaEEBlog
-https://github.com/Apress/beg-java-ee-5
-https://github.com/claudioaltamura/javaee
-https://github.com/rachedanis/J2EE-samples
-https://github.com/Berdir/hslu_enapp_webshop
-https://github.com/tsypuk/JPA-Developer-Certified-Expert
-https://github.com/shyslav/JavaEE_MusicNews-sevlets
-https://github.com/mmuruev/Warehouse
-https://github.com/amitagrawal11/shoppingcart
-https://github.com/mmuruev/Warehouse
-https://github.com/mainmacj/loanapp
-https://github.com/oravj/cargotracker-ee8
-https://github.com/otaviojava/NOSQL-BA-JavaEE-Cassandra
-https://github.com/shekhargulati/hackerpins-demo-app
+
+https://github.com/victornieto/climone
 
 
 
 
-Base project 
-https://github.com/matt77hias/JavaEE
-https://github.com/lchooman/JavaEE2014Project
-https://github.com/u1920603/javaEE-test
-https://github.com/oatkachenko/EE
+Base project  (add to project portfolio )
 https://github.com/JeremyPansier/JavaEE_website
 https://github.com/plushkinqt/VIS
 https://github.com/jeqo/java-ee-rxjava-kafka-avro
 https://github.com/blacker-cz/pis-library
 https://github.com/lreimer/building-javaee-microservices
 https://github.com/bigGreenPeople/javaEE
-https://github.com/adabeauty/JavaEE_Spring
 https://www.youtube.com/watch?v=JN1iUUitgvY
 https://github.com/MartaEN/javaEE-sandbox
-https://github.com/csoinc/java
 https://github.com/cdi-spec/cdi/tree/61a3d19384c11e24c3710064321dac36ac668a3b
-https://github.com/521v587/JavaEE-e3mall
 https://github.com/bjau/BunchOfFriends
 https://github.com/Apress/beg-java-ee-6-w-glassfish-3
 https://github.com/liimaorg/liima
-https://github.com/josueeduardo/Java-EE
+https://github.com/oravj/cargotracker-ee8
+
 
 
 
@@ -146,6 +110,7 @@ https://github.com/muhfred/WebMartApp
 https://github.com/duisenbayeva/BookStore-web-application
 https://github.com/faizan-ali/full-javaee-app
 https://github.com/Cousjava/jee-tut
+https://github.com/amitagrawal11/shoppingcart
 
 
 
