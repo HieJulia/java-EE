@@ -106,10 +106,19 @@ https://github.com/gmaslowski/ejb-certification
 https://github.com/arquillian/seam-forge
 https://github.com/daggerok/java-ee-multi-project
 https://github.com/jiyuan312986471/Java-Project
+https://github.com/packease/packease-framework-java
 
 
 https://github.com/bogartibor/Akka-JavaEE6-Integracia
 https://github.com/FeloVilches/Java-EE-Backend
+https://github.com/abhirockzz/kafka-javaee-concurrency-utilities
+https://github.com/aminechaker/Projet-ERP
+https://github.com/yangwm/JavaEELearn
+https://github.com/AdamczykMaciej/JavaNetworks
+https://github.com/goodees/goodees
+
+
+
 
 
 
@@ -214,11 +223,6 @@ Project portfolio :
 
 
 + Desktop application 
-
-
-
-
-
 
 
 
