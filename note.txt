@@ -98,6 +98,14 @@ https://github.com/KubaNeumann/jeesecdemo
 https://github.com/harishkannarao/AngularJs
 https://github.com/apache/geronimo-schema-6
 https://github.com/phillip-kruger/stompee
+https://github.com/AdamBien/jc2
+https://github.com/hantsy/javaee8-by-example-gitbook
+https://github.com/ivannov/predcomposer
+https://github.com/zaunberg/moskito-jboss
+https://github.com/gmaslowski/ejb-certification
+https://github.com/arquillian/seam-forge
+https://github.com/daggerok/java-ee-multi-project
+https://github.com/jiyuan312986471/Java-Project
 
 
 https://github.com/bogartibor/Akka-JavaEE6-Integracia
