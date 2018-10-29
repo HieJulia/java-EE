@@ -79,6 +79,30 @@ Ap dung practice project
 practice with intellij : https://github.com/Isaias2018/JavaEE-JakartaEE-
 
 https://github.com/victornieto/climone
+https://github.com/igorzg/payara-micro-docker-starter-kit
+https://github.com/minlwin/java-ee-batch1
+https://github.com/lincolnthree/con4456-coding-ee-7-easy-easier
+https://github.com/alphyon/ejemplosJavaEE
+https://github.com/julioapm/WebJavaEESpringJasper
+https://github.com/lkrzyzanek/cas-jaas-ee6-integration-example
+https://github.com/yoshioterada/ConcurrentUtil4EE
+https://github.com/saicharan8/shoppingcartwithmongodb
+https://github.com/mikecroft/cloud-native-jee
+https://github.com/flashboss/wildfly-book
+https://github.com/EExpoInc/EExpoCRUD
+https://github.com/PacktPublishing/Java-EE-8-Design-Patterns-and-Best-Practices
+https://github.com/azkevin/Bookstore
+https://github.com/queueit/QueueIT.Security-JavaEE
+https://github.com/lawrencepn/JavaEE-E-Commerce-AWS
+https://github.com/KubaNeumann/jeesecdemo
+https://github.com/harishkannarao/AngularJs
+https://github.com/apache/geronimo-schema-6
+https://github.com/phillip-kruger/stompee
+
+
+https://github.com/bogartibor/Akka-JavaEE6-Integracia
+https://github.com/FeloVilches/Java-EE-Backend
+
 
 
 
